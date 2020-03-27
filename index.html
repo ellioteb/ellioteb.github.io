@@ -68,12 +68,37 @@
 </footer>
 
 
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-159349591-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
 <script type="text/javascript">
   window.$crisp=[];
   window.CRISP_WEBSITE_ID="01b83436-2d40-480a-9409-afe9243f2457";
 
   
-  
+  $crisp.push(["on", "chat:initiated", function() {
+    ga('send', 'event', 'Chat', 'Chat Initiated');
+  }]);
+  $crisp.push(["on", "chat:opened", function() {
+    ga('send', 'event', 'Chat', 'Chat Opened');
+  }]);
+  $crisp.push(["on", "chat:closed", function() {
+    ga('send', 'event', 'Chat', 'Chat Closed');
+  }]);
+  $crisp.push(["on", "message:sent", function() {
+    ga('send', 'event', 'Chat', 'Message Sent');
+  }]);
+  $crisp.push(["on", "message:received", function() {
+    ga('send', 'event', 'Chat', 'Message Received');
+  }]);
 </script>
 <script async src="https://client.crisp.chat/l.js"></script>
 
