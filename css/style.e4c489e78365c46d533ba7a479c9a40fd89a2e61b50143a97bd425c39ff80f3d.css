@@ -179,3 +179,8 @@ a: visitied,a:hover,a:active {
     width: 0}
 .actions .action:hover {
     color: #666}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
